@@ -1,0 +1,121 @@
+:root {
+    --col-prim-desaturated-red: hsl(0, 36%, 70%);
+    --col-prim-soft-red: hsl(0, 93%, 68%);
+    --col-neut-dark-gray-red: hsl(0, 6%, 24%);
+    --fw-light: 300;
+    --fw-normal: 400;
+    --fw-bold: 600;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+article {
+    max-width: 480px;
+    width: 100%;
+    font-family: 'Josefin Sans', sans-serif;
+    margin: auto;
+
+}
+
+main {
+    display: grid;
+    grid-auto-rows: auto;
+    grid-auto-columns: 100%;
+    margin: auto;
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+}
+
+header {
+    padding: 2rem;
+    height: min-content;
+}
+
+.hero {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
+.hero img {
+    object-fit: cover;
+    object-position: left;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+.main-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    text-align: center;
+}
+
+h1 {
+    padding: 1rem 0;
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+h1 span {
+    font-weight: var(--fw-light);
+    color: var(--col-prim-desaturated-red);
+}
+
+p {
+    color: var(--col-prim-desaturated-red);
+    line-height: 1.4rem;
+    font-weight: var(--fw-bold);
+}
+
+div.submit-form{
+    display: flex;
+    border: 1px solid var(--col-prim-desaturated-red);
+    border-radius: 2rem;
+    height: 3rem;
+    align-items: center;
+}
+
+div.submit-form button{
+    min-height: 100%;
+    height:inherit;
+    border-radius: inherit;
+    padding: 0 1.5rem;
+    background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    border: transparent;
+    box-shadow: 0 1rem 3rem .2rem var(--col-prim-desaturated-red);
+}
+
+div.input {
+    justify-items: center;
+    min-height: 100%;
+    height: 100%;
+    border-radius: inherit;
+    border: transparent;
+}
+
+div.input input {
+    min-height: 100%;
+    height: 100%;
+    background-color: transparent;
+    padding: 0 1.5rem;
+    border: transparent;
+    border-radius: inherit;
+}
+
+input:focus-visible {
+    outline:none;
+}
+
+div.submit-form:focus-within {
+    /*outline: var(--col-prim-desaturated-red) solid 2px;*/
+    border: 2px solid var(--col-prim-desaturated-red);
+    outline: none;
+}
