@@ -30,11 +30,13 @@ main {
     margin: auto;
     width: 100%;
     background-image: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    min-height: 97dvh;
 }
 
 header {
     padding: 2rem;
     height: 100%;
+    grid-row-start: 1;
 }
 
 header img {
@@ -61,7 +63,7 @@ header img {
     align-items: center;
     padding: 15% 10%;
     text-align: center;
-    max-height: 100%;
+    min-height: 100%;
 }
 
 h1 {
@@ -103,7 +105,7 @@ div.submit-form button{
     padding: 0 1.5rem;
     background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
     border: transparent;
-    box-shadow: 0 1rem 4rem .1rem var(--col-prim-desaturated-red);
+    box-shadow: 0 1rem 5rem .1rem var(--col-prim-desaturated-red);
     margin-right: -2px;
 }
 
@@ -146,6 +148,7 @@ div.submit-form:focus-within {
     padding-left: 2rem;
     font-size: .8rem;
     text-align: left;
+    height: 1.5rem;
 }
 
 #error-icon {
@@ -169,23 +172,25 @@ div.submit-form:focus-within {
 
 @media screen and (min-width: 610px) {
     main{
-        grid-template-columns: .6fr .5fr;
+        grid-template-columns: .8fr .6fr;
         grid-template-areas:
         "header hero"
         "main-content hero";
         grid-template-rows: .2fr 1fr;
+        max-height: 48rem;
+        min-height: 0;
     }
 
     article {
         display: grid;
         place-content: center;
         margin: auto;
-        max-width: 75rem;
+        max-width: 90rem;
     }
 
     h1 {
-       /* font-size: clamp(3rem 4rem 4rem);*/
-       font-size: 4rem;
+        font-size: clamp(2rem, 6vw, 4rem);
+       /*font-size: 4rem;*/
     }
 
     .hero {
@@ -197,9 +202,17 @@ div.submit-form:focus-within {
         padding-left: 20%;
     }
 
+    header img {
+        max-height: 3rem;
+    }
+
+    p {
+        line-height: 1.8rem;
+    }
+
     .main-cont {
         grid-area: main-content;
-        padding: 15% 20% 15% 20%;
+        padding: 10% 25% 15% 20%;
         text-align: left;
         background-image: url(./images/bg-pattern-desktop.svg);
         background-size: cover;
